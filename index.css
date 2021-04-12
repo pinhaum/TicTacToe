@@ -1,10 +1,30 @@
 body {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .board {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  width: 606px;
+  height: 606px;
+  border: 1px solid black;
 }
 
 .square {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 6em;
+}
+
+.square:hover {
+  cursor: pointer;
+  background-color: #bbdefb;
 }
