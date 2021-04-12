@@ -18,7 +18,7 @@ class TicTacToe {
             : PLAYER_ONE_SYMBOL;
       } else {
         alert(`Player ${this.currentPlayer} is the WINNER!!`);
-        this.start;
+        this.start();
       }
       console.log(this.board);
     }
@@ -26,7 +26,7 @@ class TicTacToe {
 
   updateBoard() {
     let gameBoard = document.getElementById('gameboard');
-    let squareElements = gameboard.childNodes;
+    let squareElements = gameBoard.childNodes;
     squareElements.forEach((element, index) => {
       if (element.innerText != this.board[index]) {
         element.innerText = this.board[index];
