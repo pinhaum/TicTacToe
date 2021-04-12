@@ -13,8 +13,19 @@ class TicTacToe {
         this.currentPlayer == PLAYER_ONE_SYMBOL
           ? PLAYER_TWO_SYMBOL
           : PLAYER_ONE_SYMBOL;
+      this.updateBoard();
       console.log(this.board);
     }
+  }
+
+  updateBoard() {
+    let gameBoard = document.getElementById('gameboard');
+    let squareElements = gameboard.childNodes;
+    squareElements.forEach((element, index) => {
+      if (element.innerText != this.board[index]) {
+        element.innerText = this.board[index];
+      }
+    });
   }
 
   drawBoard() {
